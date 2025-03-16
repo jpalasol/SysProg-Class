@@ -1,7 +1,6 @@
 #ifndef __DSHLIB_H__
     #define __DSHLIB_H__
 
-
 //Constants for command structure sizes
 #define EXE_MAX 64
 #define ARG_MAX 256
@@ -27,7 +26,6 @@ typedef struct command{
 }command_t;
 */
 
-
 //Special character #defines
 #define SPACE_CHAR  ' '
 #define PIPE_CHAR   '|'
@@ -35,6 +33,9 @@ typedef struct command{
 
 #define SH_PROMPT "dsh2> "
 #define EXIT_CMD "exit"
+
+// Macro for not implemented built-in commands (e.g., dragon)
+#define M_NOT_IMPL "The requested operation is not implemented yet!\n"
 
 //Standard Return Codes
 #define OK                       0
@@ -67,9 +68,6 @@ Built_In_Cmds exec_built_in_cmd(cmd_buff_t *cmd);
 //main execution context
 int exec_local_cmd_loop();
 int exec_cmd(cmd_buff_t *cmd);
-
-
-
 
 //output constants
 #define CMD_OK_HEADER       "PARSED COMMAND LINE - TOTAL COMMANDS %d\n"

@@ -7,7 +7,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 # Source files
-SOURCES = signal-basic signal-custom signal-logic signal-do-not-disturb trap-segfault
+SOURCES = signal-basic signal-custom signal-logic signal-do-not-disturb
 
 # Executable names
 EXECUTABLES = $(SOURCES:.c=)

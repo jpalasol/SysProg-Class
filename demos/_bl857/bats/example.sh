@@ -18,7 +18,7 @@
     echo "captured output: $output\n"
     echo "return status: $status\n"
 
-    [ "$status" -eq 2 ]
+    [ "$status" -eq 1 ]
 }
 
 @test "ls /dev/null exists" {
@@ -49,10 +49,10 @@
 @test "heredoc test example" {
     # CONCEPT: commands that read from stdin can be provided multi-line input using a "heredoc"
     # CONCEPT: this is the same way in which you can test a "run" of `dsh`
-    run tee <<FOO
+    run tee <<EOF
 hello,
 world
-FOO
+EOF
 
     stripped_output=$(echo "$output" | tr -d '[:space:]')
 

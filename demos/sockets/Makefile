@@ -7,7 +7,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 # Source files
-SOURCES = client-echo server-echo server-proto server-proto-thread client-proto proto_test get-host-by-name
+SOURCES = client-echo server-echo server-proto server-proto-thread client-proto proto_test
 
 # Executable names
 EXECUTABLES = $(SOURCES:.c=)
